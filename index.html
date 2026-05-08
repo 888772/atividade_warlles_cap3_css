@@ -1,0 +1,44 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Resumo Capitulo 3 - CSS</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	<h1 class="titulo">Desenho de Páginas Web com CSS - RESUMO</h1>
+	<p>
+	O capítulo explica que o CSS permite transformar documentos HTML simples em páginas atraentes, definindo cores, fontes, layouts e decorações. O conteúdo detalha o funcionamento das regras CSS, que consistem em um seletor (para identificar o elemento) e uma declaração (composta por propriedade e valor).
+	</p>
+	<p>
+		Os principais tópicos discutidos incluem:
+	</p>
+	
+	<ul>
+		<li><b>Métodos de Inclusão:</b> O uso de folhas de estilo externas (arquivos .css), estilos internos (dentro da tag &lt;style&gt;) e estilos inline (diretamente no atributo style do elemento).</li>
+		<li><b>Seletores e Cascata:</b> A explanação de diversos tipos de seletores (ID, classe, atributo, hierárquicos) e como o princípio da <b>cascata e especificidade</b> decide qual regra prevalece quando múltiplas instruções se aplicam ao mesmo elemento.
+		<li><b>Formatação e Design:</b> Técnicas para estilizar textos (fontes, cores, espaçamento), listas (marcadores personalizados) e tabelas.</li>
+		<li><b>Sistemas de Layout:</b> Uma análise detalhada do <b>Modelo de Caixa (Box Model)</b> — que envolve margens, bordas e preenchimento — e dos sistemas de posicionamento como <b>Float, Flexbox</b> e o moderno <b>Grid Layout</b>.
+	</ul>
+	
+	<h2>3.1 Introdução</h2>
+	<h3>3.1.1 O Princípio do CSS</h3>
+	<p>
+		O funcionamento fundamental das Folhas de Estilo em Cascata (CSS) baseia-se na aplicação de regras específicas que determinam como os elementos de um documento HTML devem ser visualizados no frontend. De acordo com o princípio básico da linguagem, uma regra CSS é estruturalmente composta por dois elementos principais: o seletor e o bloco de declaração. O seletor exerce a função primordial de identificar e apontar para o elemento ou conjunto de elementos que receberão a estilização, funcionando como o alvo da instrução.
+	</p>
+	
+	<img class="css_rule" src="images/css_rule.png" alt="Figure 3.2 The Structure of CSS Rules">
+	
+	<p>
+		Por sua vez, o bloco de declaração, que é invariavelmente delimitado por chaves, contém as diretrizes que definem as alterações estéticas. Cada declaração individual dentro deste bloco é formada por um par composto por uma propriedade e um valor, separados por dois-pontos. Enquanto a propriedade indica qual aspecto visual será modificado — como a cor, o tipo de fonte ou o espaçamento —, o valor estabelece a configuração exata que deve ser aplicada. O encerramento de cada declaração é marcado por um ponto e vírgula, permitindo que múltiplas instruções sejam agrupadas para um mesmo seletor. Dessa forma, o CSS opera transformando a estrutura bruta do HTML em uma interface visualmente organizada e atraente por meio dessa sintaxe padronizada.
+	</p>
+	
+	<img class="css_rule" src="images/example_rule.png" alt="Figure 3.2 The Structure of CSS Rules">
+	
+	<h3>3.1.2 Incluindo CSS no HTML</h3>
+	
+	<p>
+		A inclusão de regras CSS em documentos HTML pode ser realizada através de três métodos distintos, cada um com implicações específicas para a organização e manutenção do projeto de software. A escolha da técnica mais adequada depende da necessidade de reutilização do código e da escala da aplicação web.  O método mais recomendado pela literatura técnica é o uso de Folhas de Estilo Externas (External CSS). Nesta abordagem, as instruções de estilo são armazenadas em ficheiros de texto independentes com a extensão .css, que são posteriormente ligados ao documento HTML através do elemento <link> inserido na secção <head>. Esta técnica promove uma separação clara entre a estrutura (HTML) e a apresentação (CSS), permitindo que um único ficheiro de estilos seja partilhado por múltiplos documentos HTML. Consequentemente, assegura-se a consistência visual de um projeto inteiro e facilita-se a manutenção, uma vez que alterações centrais no ficheiro CSS propagam-se automaticamente para todas as páginas vinculadas.  Alternativamente, existem as Folhas de Estilo Internas (Internal CSS), cujas regras são definidas diretamente no cabeçalho do documento HTML, dentro do elemento <style>. Embora útil para fins didáticos ou para estilos exclusivos de uma única página, esta prática é considerada uma exceção, pois dificulta a sincronização de alterações e impede a reutilização do código noutros documentos sem duplicação manual.  Por fim, os Estilos Inline (Inline CSS) permitem a especificação de declarações CSS diretamente no atributo style de um elemento HTML individual. Este método é o menos aconselhável em contextos profissionais, pois resulta na perda total de reutilização e escalabilidade, exigindo que cada elemento seja estilizado separadamente, o que compromete a eficiência do desenvolvimento e a integridade da arquitetura do projeto.
+	</p>
+	
+	</body>
+</html>
